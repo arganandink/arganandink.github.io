@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArganAndInk | Printable Guides</title>
+<meta name="description" content="ArganAndInk is an independent shop from Casablanca, Morocco, making printable beauty, modest style and kids' drawing guides.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: single readable column, plain legal document with a quiet header band */
+:root {
+  --bg: #fbfaf8; --fg: #2a2623; --muted: #6b635c; --line: #e6e1db; --accent: #8a4b2e; --band: #f2eee9;
+  --display: "Fraunces", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1b1917; --fg: #ece7e1; --muted: #a79e95; --line: #35302c; --accent: #e0a07e; --band: #23201d; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #1b1917; --fg: #ece7e1; --muted: #a79e95; --line: #35302c; --accent: #e0a07e; --band: #23201d; color-scheme: dark }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 var(--body); }
+.band { background: var(--band); border-bottom: 1px solid var(--line); }
+.wrap { max-width: 68ch; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band .wrap { padding-block: 48px 32px; }
+.eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+h1 { font: 600 clamp(30px, 5vw, 40px)/1.15 var(--display); margin: 0 0 12px; text-wrap: balance; }
+.meta { color: var(--muted); margin: 0; font-size: 15px; }
+main .wrap { padding-block: 32px 64px; display: grid; gap: 28px; }
+section { display: grid; gap: 8px; }
+h2 { font: 600 21px/1.3 var(--display); margin: 0; text-wrap: balance; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.summary { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; color: var(--fg); }
+</style>
+
+<style>
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--band); display: grid; gap: 6px; }
+.card h3 { font: 600 18px/1.3 var(--display); margin: 0; }
+.card p { color: var(--muted); font-size: 15px; }
+.btn { display: inline-block; background: var(--accent); color: var(--bg); padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; width: fit-content; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer .wrap { padding-block: 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <p class="eyebrow">ArganAndInk · Casablanca, Morocco</p>
+    <h1>Printable guides for modest style, self care and little artists</h1>
+    <p class="meta">An independent digital shop selling printable PDF guides on Etsy.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section>
+      <h2>Our guides</h2>
+      <div class="grid">
+        <div class="card"><h3>Hijab Face Shape Guide</h3><p>Find your face shape and the hijab styles that suit it, with do's and don'ts for 6 face shapes.</p></div>
+        <div class="card"><h3>Hijab Color Analysis Kit</h3><p>A simple at-home test to find your season and the hijab colors that make you glow.</p></div>
+        <div class="card"><h3>Gua Sha &amp; Face Yoga Guide</h3><p>Easy step-by-step routines and charts for a calm daily self care ritual.</p></div>
+        <div class="card"><h3>Benny Draw-Along Stories</h3><p>Funny directed drawing story books for kids aged 4 to 8, with tracing and dot-to-dot.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>Shop</h2>
+      <p>All guides are instant-download PDFs sold through our Etsy shop.</p>
+      <a class="btn" href="https://www.etsy.com/shop/ArganAndInk">Visit ArganAndInk on Etsy</a>
+    </section>
+    <section>
+      <h2>ArganAndInk Publisher</h2>
+      <p>ArganAndInk Publisher is our internal tool. It publishes the pins we design (images and short videos about our guides) to the ArganAndInk Pinterest account, with a link to the matching Etsy listing. It only accesses our own Pinterest account. Read the <a href="privacy.html">privacy policy</a>.</p>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Send us a message through Etsy at <a href="https://www.etsy.com/shop/ArganAndInk">etsy.com/shop/ArganAndInk</a>. We usually reply within a few hours.</p>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap"><span>© 2026 ArganAndInk</span><a href="privacy.html">Privacy policy</a></div></footer>
+</body>
+</html>
