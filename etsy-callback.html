@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArganAndInk Etsy Connect</title>
+<style>
+:root { --bg: #fbfaf8; --fg: #2a2623; --muted: #6b635c; --line: #e6e1db; --accent: #8a4b2e; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1b1917; --fg: #ece7e1; --muted: #a79e95; --line: #35302c; --accent: #e0a07e; color-scheme: dark } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, sans-serif; }
+main { max-width: 640px; margin: 0 auto; padding: 48px 16px; display: grid; gap: 16px; }
+h1 { font-size: 26px; margin: 0; }
+textarea { width: 100%; box-sizing: border-box; min-height: 120px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: transparent; color: var(--fg); font: 14px/1.5 ui-monospace, monospace; }
+button { background: var(--accent); color: var(--bg); border: 0; border-radius: 999px; padding: 10px 20px; font-weight: 600; cursor: pointer; width: fit-content; }
+p { margin: 0; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>ArganAndInk is connected to Etsy</h1>
+  <p>Copy the link below and paste it into the terminal where you ran <code>python main.py login</code>.</p>
+  <textarea id="link" readonly></textarea>
+  <button id="copy" type="button">Copy link</button>
+  <p id="msg"></p>
+</main>
+<script>
+const box = document.getElementById("link");
+box.value = location.href;
+document.getElementById("copy").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(box.value); document.getElementById("msg").textContent = "Copied."; }
+  catch { box.select(); document.getElementById("msg").textContent = "Press Ctrl+C to copy."; }
+});
+</script>
+</body>
+</html>
